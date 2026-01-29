@@ -8,6 +8,7 @@ import { LoveLetter } from "@/components/LoveLetter";
 import { FloatingElements } from "@/components/FloatingElements";
 import { Button } from "@/components/ui/button";
 
+
 type Section = "intro" | "cake" | "cutting" | "letter";
 
 export default function Home() {
@@ -126,7 +127,7 @@ export default function Home() {
                 className="text-xl md:text-2xl text-muted-foreground mb-8 font-serif"
                 data-testid="text-subtitle"
               >
-                A special celebration created just for you
+                Let us celebrate it together mi amore!
               </motion.p>
 
               {/* Decorative line */}
@@ -291,7 +292,7 @@ export default function Home() {
                 className="text-muted-foreground mb-8"
                 data-testid="text-letter-description"
               >
-                Open the envelope to reveal a heartfelt letter
+                Open the envelope my love
               </motion.p>
               
               <LoveLetter />

@@ -26,7 +26,7 @@ export function LoveLetter() {
             >
               <div className="relative w-72 h-48">
                 {/* Back flap */}
-                <div 
+                <div
                   className="absolute top-0 left-0 right-0 h-24"
                   style={{
                     background: 'linear-gradient(180deg, #fce7f3 0%, #fbcfe8 100%)',
@@ -34,9 +34,9 @@ export function LoveLetter() {
                     transformOrigin: 'top',
                   }}
                 />
-                
+
                 {/* Envelope body */}
-                <div 
+                <div
                   className="absolute bottom-0 left-0 right-0 h-32 rounded-b-lg"
                   style={{
                     background: 'linear-gradient(180deg, #fdf2f8 0%, #fce7f3 100%)',
@@ -50,7 +50,7 @@ export function LoveLetter() {
                   transition={{ duration: 2, repeat: Infinity }}
                   className="absolute top-16 left-1/2 -translate-x-1/2 z-10"
                 >
-                  <Heart 
+                  <Heart
                     className="w-10 h-10 text-pink-500 fill-pink-500"
                     style={{ filter: 'drop-shadow(0 2px 4px rgba(236, 72, 153, 0.4))' }}
                   />
@@ -116,7 +116,7 @@ export function LoveLetter() {
                   transition={{ delay: 0.5 }}
                 >
                   <h2 className="text-3xl font-serif text-pink-600 mb-2" data-testid="text-letter-title">
-                    My Dearest Love,
+                    My Demon,
                   </h2>
                   <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-pink-400 to-transparent mx-auto" />
                 </motion.div>
@@ -129,23 +129,40 @@ export function LoveLetter() {
                   data-testid="text-letter-content"
                 >
                   <p className="text-lg">
-                    On this beautiful day, I want you to know how incredibly special you are to me. 
-                    Every moment with you feels like a precious gift wrapped in love and sprinkled with joy.
+                    First of all,
+                    Happiest Birthday mi amore!
+                    Mai yeh is liyai likh rhi hoon takay tjy bta sakon that how special you are to me.
+                    Every moment with you feels like a precious gift of love. <br /> I love you demon.
                   </p>
-                  
+
                   <p className="text-lg">
-                    Your smile lights up my world brighter than any birthday candle ever could. 
+                    Your smile lights up my world brighter than any birthday candle ever could.
                     Your laughter is the sweetest melody I've ever heard.
+                    The thought alone that you are only mine makes me fly in clouds demon.
+                    Demon, I care for you deeply — more than just friendship.
+                    I love you, your eyes, your smile, your Dudaklar they make me addict and even your stubbornness.
+                    You deserve love meri jaan more than iam providing you you deserve many more.
+                    I know kai utna nhi dai paon gi jitnay ki tu haqdaar hai pr hamesha tjy apni aankhon pr bitha kr rakhoon gi.
+                    And yes i  want you to know how special you are to me
+                    and how much joy you bring to my life ka kitna deewana kr rkha hai apnai mjy apny husn kai jaal mai phansaya howa hai.
+
+                    No matter what, I value you mi amore your friendship,
+                    your heart and most of all you presence it make me feel alive, happiest and complete iris.
                   </p>
-                  
+
                   <p className="text-lg">
-                    As you celebrate another year of life, I celebrate another year of being blessed 
-                    to have you by my side. You make every day feel like a celebration.
+                    I made this demon takay tjy hamesha yaad rahay how special you are.
+                    You worth every effort every ounce of love i have in me.
+                    Let's spend another year of life together and let's keep on spending our lifes together demon.
+                    Let's celebrate another year of being blessed
+                    to have you by my side.
+                    You make every day feel like a celebration Demon.
                   </p>
 
                   <p className="text-lg italic">
-                    May this birthday bring you all the happiness you deserve, and may all your 
+                    May this birthday bring you all the happiness you deserve and may all your
                     wishes come true just like you've made my wish come true by being in my life.
+
                   </p>
                 </motion.div>
 
@@ -159,7 +176,7 @@ export function LoveLetter() {
                     With all my love,
                   </p>
                   <p className="text-2xl font-serif text-pink-700 font-semibold">
-                    Forever Yours
+                    Forever and Only Yours
                   </p>
                   <motion.div
                     animate={{ opacity: [0.7, 1, 0.7] }}
@@ -179,12 +196,12 @@ export function LoveLetter() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 0 }}
-                animate={{ 
+                animate={{
                   opacity: [0, 1, 0],
                   y: [-20, -60, -100],
                   x: Math.sin(i) * 30
                 }}
-                transition={{ 
+                transition={{
                   duration: 3,
                   delay: 1 + i * 0.5,
                   repeat: Infinity,
@@ -196,7 +213,7 @@ export function LoveLetter() {
                   bottom: '100%'
                 }}
               >
-                <Heart 
+                <Heart
                   className={`${i % 2 === 0 ? 'w-4 h-4 text-pink-400' : 'w-3 h-3 text-red-400'} fill-current`}
                 />
               </motion.div>
