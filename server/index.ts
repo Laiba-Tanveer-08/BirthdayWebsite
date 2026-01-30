@@ -2,7 +2,19 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import dotenv from "dotenv";
+import { Pool } from "pg";
 
+
+dotenv.config();
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
+
+export default pool;
+pool.query("SELECT NOW()")
+  .then(res => console.log("✅ DB connected:", res.rows[0].now))
+  .catch(err => console.error("❌ DB error:", err));
 const app = express();
 const httpServer = createServer(app);
 
