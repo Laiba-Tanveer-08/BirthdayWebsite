@@ -3,7 +3,11 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-export default defineConfig({
+export default defineConfig(async () => ({
+  // ✅ Required for GitHub Pages project sites:
+  // https://<username>.github.io/<repo-name>/
+  base: "/BirthdayWebsite/",
+
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -19,22 +23,30 @@ export default defineConfig({
         ]
       : []),
   ],
+
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      // ✅ Fix: since root is already set to <repo>/client, this should be just "src"
+      "@": path.resolve(import.meta.dirname, "src"),
+      "@shared": path.resolve(import.meta.dirname, "..", "shared"),
+      "@assets": path.resolve(import.meta.dirname, "..", "attached_assets"),
     },
   },
-  root: path.resolve(import.meta.dirname, "client"),
+
+  // ✅ Your Vite app lives in /client
+  root: path.resolve(import.meta.dirname),
+
+  // ✅ GitHub Actions workflow uploads client/dist, so build into client/dist
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
+
   server: {
     fs: {
       strict: true,
       deny: ["**/.*"],
     },
   },
-});
+}));
+
